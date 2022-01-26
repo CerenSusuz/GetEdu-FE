@@ -1,0 +1,39 @@
+<section class="vh-100 mt-4">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <form [formGroup]="registerForm" id="register-form">
+                    <!-- Firstname input -->
+                    <div class="form-outline mt-5 mb-2">
+                        <input formControlName="firstName" type="email" class="form-control form-control-lg" placeholder="Enter your firstname" />
+                        <label class="form-label mt-1 ms-2" for="form3Example3">FirstName</label>
+                    </div>
+                    <!-- lastName input -->
+                    <div class="form-outline mb-2">
+                        <input formControlName="lastName" type="email" class="form-control form-control-lg" placeholder="Enter your lastname" />
+                        <label class="form-label mt-1 ms-2" for="form3Example3">LastName</label>
+                    </div>
+                    <!-- Email input -->
+                    <div class="form-outlinemb-2">
+                        <input formControlName="email" type="email" class="form-control form-control-lg" placeholder="Enter a valid email address" />
+                        <label class="form-label mt-1 ms-2" for="form3Example3">Email address</label>
+                    </div>
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <input formControlName="password" type="password" class="form-control form-control-lg" placeholder="Enter a valid password" />
+                        <label class="form-label mt-1 ms-2" for="form3Example4">Password</label>
+                    </div>
+
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="register()">Register here</button>
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

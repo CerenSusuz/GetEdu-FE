@@ -1,0 +1,73 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed">
+    <!-- Container wrapper -->
+    <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" routerLink="/homepage" style="color: rgb(241, 137, 62); font-size: 2rem;">GetEdu</a>
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse m-2" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/homepage">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/categories">Categories</a>
+                </li>
+                <li class="dropdown"><a href="#"><span>Drop Down</span> </a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown"><a href="#"><span>Deep Drop Down</span> </a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div *ngIf="isLogOK() && getUser()">
+                <ul class="navbar-nav me-auto mb-lg-0 ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="text-center">
+                                {{getUser()}}
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item"><button class="btn btn-outline" routerLink="/user/edit/">Edit Info</button></a></li>
+                            <li><a class="dropdown-item"><button class="btn btn-outline" (click)="logout()">Log Out</button></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Left links -->
+
+            <div class="d-flex align-items-center" *ngIf="!isLogOK()">
+                <div class="d-flex btn-group ps-4" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                    <label class="btn btn-outline-primary px-3 me-2" for="btnradio1" routerLink="/login">Login</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-primary me-3" for="btnradio2" routerLink="/register">Register</label>
+                </div>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
