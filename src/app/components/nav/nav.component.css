@@ -6,11 +6,6 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #ef7f4d;
-    text-decoration: none;
-}
-
 .fixed {
     position: fixed;
     top: 0;
@@ -21,19 +16,13 @@ a:hover {
 }
 
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-
-
 /**
 * Desktop Navigation
 */
 
 .navbar {
-    background-color: transparent;
+    background-color: rgb(233, 227, 233);
     border: none;
-    font-size: 2em;
 }
 
 .navbar ul {
@@ -53,8 +42,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-size: 15px;
+    padding: .8em 1em .8em 1em;
     color: #4e4039;
     white-space: nowrap;
     transition: 0.3s;
@@ -62,9 +50,7 @@ a:hover {
 
 .navbar a i,
 .navbar a:focus i {
-    font-size: 12px;
     line-height: 0;
-    margin-left: 5px;
 }
 
 .navbar a:hover,
@@ -73,15 +59,6 @@ a:hover {
 .navbar li:hover>a {
     color: #d3c3bc;
     border: #eb5d1e;
-}
-
-.navbar .getstarted,
-.navbar .getstarted:focus {
-    background: #918681;
-    color: #fff;
-    padding: 10px 25px;
-    margin-left: 30px;
-    border-radius: 50px;
 }
 
 .navbar .getstarted:hover,

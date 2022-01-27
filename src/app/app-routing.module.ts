@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:"user/edit",component:EditUserComponent, canActivate:[LoginGuard]},
   {path:"categories",component:CategoryComponent, canActivate:[LoginGuard]},
 
-  {path:"categories/filter/categoryParent/:parentCategoryId",component:CategoryComponent},
+  {path:"categories/filter/categoryParent/:parentCategoryId",component:HomepageComponent},
 
 ];
 

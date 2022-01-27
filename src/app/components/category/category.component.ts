@@ -61,7 +61,7 @@ export class CategoryComponent {
 
   getCategoryClass(category: Category) {
     if (category == this.currentCategory) {
-      return "table-info cursorPointer"
+      return "table-warning cursorPointer"
     }
     else {
       return "cursorPointer"
